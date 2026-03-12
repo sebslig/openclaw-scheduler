@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openclaw-scheduler"
+version = "0.1.0"
+description = "GPU cluster scheduler for distributed training jobs"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pydantic>=2.0.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.22.0",
+    "pyyaml>=6.0",
+    "psutil>=5.9.0",
+    "requests>=2.31.0"
+]
+
+[project.scripts]
+openclaw-hub = "openclaw.hub.main:main"
+openclaw-agent = "openclaw.agent.main:main"
