@@ -1,0 +1,13 @@
+cluster_name: ml-cluster-01
+hub:
+  port: 8080
+  host: 0.0.0.0
+  reconciliation_interval: 5
+
+scheduler:
+  algorithm: bin-packing
+  allow_preemption: true
+
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
